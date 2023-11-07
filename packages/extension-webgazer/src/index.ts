@@ -289,9 +289,10 @@ class WebGazerExtension implements JsPsychExtension {
         x: this.round_predictions ? Math.round(gazeData.x) : gazeData.x,
         y: this.round_predictions ? Math.round(gazeData.y) : gazeData.y,
         t: gazeData.t,
+        b: gazeData.isBlink,
       };
+      //console.log(gazeData)
       if (this.activeTrial) {
-        //console.log(`handleUpdate: t = ${Math.round(gazeData.t)}, now = ${Math.round(performance.now())}`);
         d.t = Math.round(gazeData.t - this.currentTrialStart);
         this.currentTrialData.push(d); // add data to current trial's data
       }

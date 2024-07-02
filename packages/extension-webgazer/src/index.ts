@@ -289,7 +289,10 @@ class WebGazerExtension implements JsPsychExtension {
         x: this.round_predictions ? Math.round(gazeData.x) : gazeData.x,
         y: this.round_predictions ? Math.round(gazeData.y) : gazeData.y,
         t: gazeData.t,
-        b: gazeData.isBlink,
+        b: gazeData.eyeFeatures.isBlink,
+        oLR: gazeData.eyeFeatures.outOfPlaneLR,
+        oTB: gazeData.eyeFeatures.outOfPlaneTB,
+        dz: gazeData.eyeFeatures.distanceToCamera,
       };
       //console.log(gazeData)
       if (this.activeTrial) {

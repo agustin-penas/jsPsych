@@ -291,6 +291,8 @@ class WebGazerExtension implements JsPsychExtension {
         t: gazeData.t,
         b: gazeData.eyeFeatures.isBlink,
         importantKeypoints: gazeData.eyeFeatures.importantKeypoints,
+        leftEye: gazeData.eyeFeatures.left.patch,
+        rightEye: gazeData.eyeFeatures.right.patch,
         dz: gazeData.eyeFeatures.distanceToCamera,
       };
       //console.log(gazeData)

@@ -293,7 +293,7 @@ class WebGazerExtension implements JsPsychExtension {
         importantKeypoints: gazeData.eyeFeatures.importantKeypoints,
         leftEye: gazeData.eyeFeatures.left.patch,
         rightEye: gazeData.eyeFeatures.right.patch,
-        dz: gazeData.eyeFeatures.distanceToCamera,
+        dz: gazeData.eyeFeatures.right.distanceToCamera,
       };
       //console.log(gazeData)
       if (this.activeTrial) {
